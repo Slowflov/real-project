@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @layer utilities {
+    .slide-in-left {
+      animation: slideInFromLeft 0.7s ease-out forwards;
+    }
+  }
+  
+
