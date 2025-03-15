@@ -1,48 +1,67 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Banner1 from "./Banner1";  // Импортируем компоненты для каждого баннера
+import Banner1 from "./Banner1";
 import Banner2 from "./Banner2";
-import Banner3 from "./Banner3";  // Импортируем третий баннер
+import Banner3 from "./Banner3";
+import Banner4 from "./Banner4";
+import Banner5 from "./Banner5";  // Добавляем 5-й баннер
 
 const ShowcaseBanner = () => {
   const [current, setCurrent] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % 3);  // Количество слайдов — 3
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + 3) % 3);  // Количество слайдов — 3
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % 5);  // Обновляем логику для 5 баннеров
+  const prevSlide = () => setCurrent((prev) => (prev - 1 + 5) % 5);  // Обновляем логику для 5 баннеров
+
+  useEffect(() => {
+    if (isHovered) return;
+    const interval = setInterval(nextSlide, 5554000);
+    return () => clearInterval(interval);
+  }, [isHovered]);
 
   return (
-    <section className="relative w-full h-[500px] overflow-hidden p-[7px] rounded-lg">
-      {/* Слайды с плавным переходом */}
+    <section
+      className="relative w-full h-[500px] overflow-hidden p-[7px] rounded-lg"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="w-full h-full relative ">
-        {/* Первый баннер */}
         <div
-          className={`absolute w-full h-full transition-opacity duration-500 ease-in-out${
-            current === 0 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+          className={`absolute w-full h-full transition-opacity duration-500  ${current === 0 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
         >
           <Banner1 key={current} />
         </div>
 
-        {/* Второй баннер */}
         <div
-          className={`absolute w-full h-full transition-opacity duration-500 ease-in-out ${
-            current === 1 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+          className={`absolute w-full h-full duration-200 ${current === 1 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
         >
           <Banner2 key={current} />
         </div>
 
-        {/* Третий баннер */}
         <div
-          className={`absolute w-full h-full transition-opacity duration-500 ease-in-out ${
-            current === 2 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+          className={`absolute w-full h-full duration-200 ${current === 2 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
         >
           <Banner3 key={current} />
         </div>
+
+        <div
+          className={`absolute w-full h-full duration-200 ${current === 3 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
+        >
+          <Banner4 key={current} />
+        </div>
+
+        <div
+          className={`absolute w-full h-full duration-200 ${current === 4 ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
+        >
+          <Banner5 key={current} />  {/* Добавляем 5-й баннер */}
+        </div>
       </div>
 
-      {/* Стрелки */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full text-white cursor-pointer"
@@ -56,15 +75,13 @@ const ShowcaseBanner = () => {
         <ChevronRight size={44} />
       </button>
 
-      {/* Индикаторы */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-        {[...Array(3)].map((_, index) => (
+        {[...Array(5)].map((_, index) => (  // Обновляем количество для 5 баннеров
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              current === index ? "bg-yellow-500 scale-110" : "bg-gray-300"
-            }`}
+            className={`cursor-pointer w-3 h-3 rounded-full transition-all ${current === index ? "bg-yellow-500 scale-110" : "bg-gray-300"
+              } hover:bg-yellow-500`}
           ></button>
         ))}
       </div>
@@ -73,6 +90,9 @@ const ShowcaseBanner = () => {
 };
 
 export default ShowcaseBanner;
+
+
+
 
 
 

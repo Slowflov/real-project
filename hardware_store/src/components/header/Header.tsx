@@ -1,6 +1,6 @@
 import NavPanel from './NavPanel';
 import MainSections from './MainSections';
-import ShowcaseBanner from './Banner/ShowcaseBanner'
+import ShowcaseBanner from './Banner/ShowcaseBanner';
 
 const Header = () => {
   return (
