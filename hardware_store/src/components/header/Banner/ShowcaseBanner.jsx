@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Banner1 from "./Banner1";
-import Banner2 from "./Banner2";
-import Banner3 from "./Banner3";
-import Banner4 from "./Banner4";
-import Banner5 from "./Banner5";  // Добавляем 5-й баннер
+import Banner1 from "./Banner1.jsx";
+import Banner2 from "./Banner2.jsx";
+import Banner3 from "./Banner3.jsx";
+import Banner4 from "./Banner4.jsx";
+import Banner5 from "./Banner5.jsx";  // Добавляем 5-й баннер
 
 const ShowcaseBanner = () => {
   const [current, setCurrent] = useState(0);
@@ -21,7 +21,7 @@ const ShowcaseBanner = () => {
 
   return (
     <section
-      className="relative w-full h-[500px] overflow-hidden p-[7px] rounded-lg"
+      className="relative w-full h-[500px] overflow-hidden px-5 rounded-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

@@ -11,7 +11,10 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    
+    /* Fix TypeScript build */
+    "composite": true,
+    "emitDeclarationOnly": true,
 
     /* Linting */
     "strict": true,
@@ -22,3 +25,4 @@
   },
   "include": ["vite.config.ts"]
 }
+

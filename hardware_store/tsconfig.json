@@ -1,7 +1,19 @@
 {
+  "compilerOptions": {
+    "allowJs": true,               
+    "checkJs": false,              
+    "jsx": "react-jsx",           
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": false,               
+    "skipLibCheck": true,          
+    "forceConsistentCasingInFileNames": true
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "include": ["src"]
 }
+
