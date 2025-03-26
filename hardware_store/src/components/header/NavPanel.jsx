@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import logoViber from '../../assets/image/logo/pngegg.png';
 import { ShoppingCart } from "lucide-react";
+import logo from './../../assets/image/logo/logo_header.png'
 
 const NavPanel = () => {
   return (
     <>
       {/* Баннер в верхней части */}
-      <section className="bg-yellow-500 text-black text-center py-1">
+      <section className="bg-[#ffa5ab] text-black text-center py-1">
         <p className="text-sm font-medium">
           Внимание! Некоторые цены и наличие товара неактуальны, просьба уточнять у менеджера.
         </p>
@@ -13,17 +15,27 @@ const NavPanel = () => {
 
       <header className="bg-white py-[35px] px-4">
         <div className="container mx-auto flex justify-between items-center">
-          
+
           {/* Логотип и описание */}
-          <div className="flex flex-col items-center pb-[3px] flex-grow">
-            <h1 className="text-3xl font-bold text-black">
-              <span className="text-yellow-500">Global</span>Строй
-            </h1>
-            <p className="text-xs m-0 tracking-tight text-black">Стройматериалы и инструменты</p>
-          </div>
-          
+          <Link to="/" className="items-center inline-flex cursor-pointer">
+            <img
+              src={logo}
+              alt="Логотип"
+              className="w-11 h-11 mr-3 object-contain"
+            />
+            <div className="flex flex-col">
+              <h1 className="text-3xl font-bold text-black">
+                <span className="text-yellow-500">Global</span>Строй
+              </h1>
+              <p className="text-xs m-0 tracking-tight text-black">
+                Стройматериалы и инструменты
+              </p>
+            </div>
+          </Link>
+
+
           {/* Поисковая панель */}
-          <div className="flex items-center flex-grow justify-center">
+          <div className="flex items-center flex-grow justify-center ml-10">
             <input
               type="search"
               placeholder="Поиск товаров..."

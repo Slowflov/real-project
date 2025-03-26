@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 const MainSections = () => {
     return (
       <div className="pt-8 pb-4 border-t border-black">
         <div className="container mx-auto flex">
           {/* Кнопка Каталог с 3 черными линиями слева */}
+          <Link to="/catalog">
           <button className="flex items-center bg-yellow-500 text-black font-bold text-lg py-4 px-10 rounded-md hover:bg-yellow-400 cursor-pointer ml-12 -mt-3">
             {/* 3 черные линии внутри кнопки */}
             <div className="flex flex-col space-y-1 mr-2">
@@ -13,6 +16,7 @@ const MainSections = () => {
             {/* Текст кнопки */}
             Каталог
           </button>
+          </Link>
   
           {/* Список навигации */}
           <nav className="ml-3">
