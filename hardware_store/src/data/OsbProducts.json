@@ -1,0 +1,71 @@
+[
+    {
+      "id": 1,
+      "img": "osb_1.png",
+      "name": "Влагостойкая плита OSB 2500х1250х10мм Украина",
+      "oldPrice": 388,
+      "newPrice": 371,
+      "availability": "Отсутствует",
+      "code": "587",
+      "quantity": 5,
+      "customPrice": 365.6,
+      "type": "10mm",
+      "category": "osb"
+    },
+    {
+      "id": 2,
+      "img": "osb_2.png",
+      "name": "Плита OSB влагостойкая 2500х1250х15мм",
+      "oldPrice": 450,
+      "newPrice": 430,
+      "availability": "В наличии",
+      "code": "588",
+      "quantity": 3,
+      "customPrice": 420,
+      "type": "15mm",
+      "category": "osb"
+    },
+    {
+      "id": 3,
+      "img": "osb_1.png",
+      "name": "Влагостойкая плита OSB 2440х1220х6мм",
+      "oldPrice": 320,
+      "newPrice": 310,
+      "availability": "В наличии",
+      "code": "589",
+      "quantity": 7,
+      "customPrice": 305,
+      "type": "6mm",
+      "category": "osb"
+    },
+    {
+      "id": 4,
+      "img": "osb_1.png",
+      "name": "Влагостойкая плита OSB 2500х1250х18мм Украина",
+      "oldPrice": 500,
+      "newPrice": 480,
+      "availability": "В наличии",
+      "code": "590",
+      "quantity": 4,
+      "customPrice": 470,
+      "type": "18mm",
+      "category": "osb"
+    },
+    {
+      "id": 5,
+      "img": "osb_2.png",
+      "name": "Влагостойкая плита OSB 2500х1250х12мм Украина",
+      "oldPrice": 500,
+      "newPrice": 480,
+      "availability": "В наличии",
+      "code": "590",
+      "quantity": 4,
+      "customPrice": 470,
+      "type": "18mm",
+      "category": "osb"
+    }
+  ]
+  
+  
+  
+  

@@ -1,7 +1,8 @@
+// components/PromoProductsSection.tsx
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { ShoppingCart } from "lucide-react";
+import ProductCard from "../card/ProductCard"; // Импортируем новый компонент
 
 import promo1 from "../../assets/image/Promo/Promo_1.png";
 import promo2 from "../../assets/image/Promo/Promo_2.png";
@@ -32,12 +33,11 @@ const PromoProductsSection = () => {
   const items = Array.from({ length: totalItems }, (_, i) => i + 1);
   const visibleItems = items.slice(index * itemsPerPage, index * itemsPerPage + itemsPerPage);
 
-  // Пример данных товаров с добавленным количеством для каждого товара
   const products = [
     { id: 1, img: promo1, name: "Цемент ПЦ ІІ/А-В-500Р-Н Ивано-Франковск 25 кг", oldPrice: 172, newPrice: 162, availability: "В наличии", code: "3271", quantity: 10, customPrice: 160 },
     { id: 2, img: promo2, name: "Knauf HP Start 30 кг гипсовая штукатурка", oldPrice: 290, newPrice: 279, availability: "В наличии", code: "4025", quantity: 10, customPrice: "27,25" },
     { id: 3, img: promo3, name: "Coral PRO — 11 клей для плитки универсал 25 кг", oldPrice: 180, newPrice: 172, availability: "В наличии", code: "1394", quantity: 15, customPrice: "158,5" },
-    { id: 4, img: promo4, name: "Влагостойкая плита OSB 2500х1250х10мм Украина", oldPrice: 388, newPrice: 371, availability: "В наличии", code: "587", quantity: 5, customPrice: "365,6" },
+    { id: 4, img: promo4, name: "Влагостойкая плита OSB 2500х1250х10мм Украина", oldPrice: 388, newPrice: 371, availability: "Отсутствует", code: "587", quantity: 5, customPrice: "365,6" },
     { id: 5, img: promo5, name: "Knauf НР Q4 MD финишная гипсовая шпаклевка 25 кг", oldPrice: 346, newPrice: "231,5", availability: "В наличии", code: "3103", quantity: 10, customPrice: "299,5" },
     { id: 6, img: promo6, name: "Рубероид РКК 10 кв.м кровельные материал", oldPrice: 241, newPrice: 235, availability: "В наличии", code: "1075", quantity: 5, customPrice: 221 },
     { id: 7, img: promo7, name: "Профиль UD-27 направляющий 0,5 мм 3 м", oldPrice: 57, newPrice: '54,5', availability: "В наличии", code: "832", quantity: 10, customPrice: "52,5" },
@@ -66,50 +66,24 @@ const PromoProductsSection = () => {
       <motion.div
         className="flex justify-center gap-4"
         key={index}
-        animate={{ opacity: [0, 1], x: [100, 0] }} // Плавное появление и сдвиг
+        animate={{ opacity: [0, 1], x: [100, 0] }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         {visibleItems.map((itemIndex) => {
           const product = products[itemIndex - 1]; // Получаем товар по индексу
 
           return (
-            <div key={product.id} className="w-1/3 bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-              <img
-                src={product.img}
-                alt={product.name}
-                className="w-full h-60 object-cover"
-              />
-              <div className="flex flex-col flex-grow p-4"> {/* flex-grow добавлен для растягивания содержимого */}
-                <div className="text-sm text-gray-500">Код: {product.code}</div>
-                <div className="text-xl font-bold">{product.name}</div>
-          
-                {/* Добавляем количество и цену */}
-                <div className="text-sm text-gray-500 mt-2">
-                  от {product.quantity} шт - 
-                  <span className="text-lg text-red-600 font-bold pl-1">{product.customPrice} грн</span>
-                </div>
-          
-                <div className="flex justify-between items-center mt-4">
-                  <div className="flex flex-col">
-                    <div className="text-xl text-gray-500 line-through">
-                      {product.oldPrice} грн
-                    </div>
-                    <div className="text-3xl font-semibold text-red-500">
-                      {product.newPrice} грн
-                    </div>
-                  </div>
-                  <div className="text-lg text-white bg-green-300 px-3 py-3 rounded-md">
-                    {product.availability}
-                  </div>
-                </div>
-              </div>
-          
-              {/* Кнопка будет внизу карточки */}
-              <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-white py-4 px-4 flex items-center justify-center gap-2 rounded-md cursor-pointer ">
-                <ShoppingCart className="w-5 h-5" />
-                <span>Подробнее</span>
-              </button>
-            </div>
+            <ProductCard
+              key={product.id}
+              img={product.img}
+              name={product.name}
+              oldPrice={product.oldPrice}
+              newPrice={product.newPrice}
+              availability={product.availability}
+              code={product.code}
+              quantity={product.quantity}
+              customPrice={product.customPrice}
+            />
           );
         })}
       </motion.div>
@@ -125,5 +99,6 @@ const PromoProductsSection = () => {
 };
 
 export default PromoProductsSection;
+
 
 

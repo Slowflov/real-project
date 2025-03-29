@@ -1,24 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import CategoryPage from "./CategoryPage"; // Импортируем компонент слайдера
-import cat1 from "../../../assets/image/category/cat_1.png";
-import cat2 from "../../../assets/image/category/cat_2.png";
-import cat3 from "../../../assets/image/category/cat_3.webp";
-import cat4 from "../../../assets/image/category/cat_4.png";
-import cat5 from "../../../assets/image/category/cat_5.png";
-import cat6 from "../../../assets/image/category/cat_6.jpg";
-import cat7 from "../../../assets/image/category/cat_7.webp";
-import cat8 from "../../../assets/image/category/cat_8.png";
-import cat9 from "../../../assets/image/category/cat_9.png";
-import cat10 from "../../../assets/image/category/cat_10.jpg";
-import cat11 from "../../../assets/image/category/cat_11.png";
-import cat12 from "../../../assets/image/category/cat_12.png";
+import CategoryPage from "./CategoryPage";
+import cat1 from "../assets/image/category/cat_1.png";
+import cat2 from "../assets/image/category/cat_2.png";
+import cat3 from "../assets/image/category/cat_3.webp";
+import cat4 from "../assets/image/category/cat_4.png";
+import cat5 from "../assets/image/category/cat_5.png";
+import cat6 from "../assets/image/category/cat_6.jpg";
+import cat7 from "../assets/image/category/cat_7.webp";
+import cat8 from "../assets/image/category/cat_8.png";
+import cat9 from "../assets/image/category/cat_9.png";
+import cat10 from "../assets/image/category/cat_10.jpg";
+import cat11 from "../assets/image/category/cat_11.png";
+import cat12 from "../assets/image/category/cat_12.png";
 
 const categories = [
   { id: 1, name: "Профиль", img: cat1, link: "/category/1" },
   { id: 2, name: "Гипсокартон", img: cat2, link: "/category/2" },
   { id: 3, name: "Цемент", img: cat3, link: "/category/3" },
-  { id: 4, name: "OSB", img: cat4, link: "/category/4" },
+  { id: 4, name: "OSB", img: cat4, link: "category/osb" },
   { id: 5, name: "Шпаклевка", img: cat5, link: "/category/5" },
   { id: 6, name: "Кровельные материалы", img: cat6, link: "/category/6" },
   { id: 7, name: "Грунтовка", img: cat7, link: "/category/7" },

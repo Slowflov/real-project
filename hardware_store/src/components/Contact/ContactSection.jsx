@@ -8,7 +8,7 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Здесь будет логика для отправки заявки (например, отправка на сервер)
-    console.log(`Заявка отправлена с номером: ${phoneNumber}`);
+    // console.log(`Заявка отправлена с номером: ${phoneNumber}`);
   };
 
   return (
