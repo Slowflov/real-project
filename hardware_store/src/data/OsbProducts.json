@@ -9,7 +9,7 @@
       "code": "587",
       "quantity": 5,
       "customPrice": 365.6,
-      "type": "10mm",
+      "type": "влагостойкий",
       "category": "osb"
     },
     {
@@ -22,7 +22,7 @@
       "code": "588",
       "quantity": 3,
       "customPrice": 420,
-      "type": "15mm",
+      "type": "влагостойкий",
       "category": "osb"
     },
     {
@@ -35,7 +35,7 @@
       "code": "589",
       "quantity": 7,
       "customPrice": 305,
-      "type": "6mm",
+      "type": "влагостойкий",
       "category": "osb"
     },
     {
@@ -48,7 +48,7 @@
       "code": "590",
       "quantity": 4,
       "customPrice": 470,
-      "type": "18mm",
+      "type": "влагостойкий",
       "category": "osb"
     },
     {
@@ -61,7 +61,7 @@
       "code": "590",
       "quantity": 4,
       "customPrice": 470,
-      "type": "18mm",
+      "type": "деревяный",
       "category": "osb"
     }
   ]

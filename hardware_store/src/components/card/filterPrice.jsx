@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import TypeFilter from "./TypeFilter"; // Импортируем компонент фильтра по типу
 
 const priceRanges = {
   osb: [100, 500],
@@ -9,10 +10,13 @@ const priceRanges = {
 };
 
 const FilterPrix = ({ category, OsbProducts, onFilterChange }) => {
-  const [filters, setFilters] = useState({ price: priceRanges[category] || [0, 10000] });
+  const [filters, setFilters] = useState({ 
+    price: priceRanges[category] || [0, 10000],
+    typeFilter: false, 
+  });
 
   useEffect(() => {
-    setFilters({ price: priceRanges[category] || [0, 10000] });
+    setFilters({ price: priceRanges[category] || [0, 10000], typeFilter: false });
   }, [category]);
 
   const handleSliderChange = (value) => {
@@ -22,14 +26,31 @@ const FilterPrix = ({ category, OsbProducts, onFilterChange }) => {
     }));
   };
 
-  const handleFilterClick = () => {
-    // Фильтрация товаров только по цене
+  const handleTypeFilterChange = (e) => {
+    const newTypeFilter = e.target.checked;
+
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      typeFilter: newTypeFilter,
+    }));
+
+    // Фильтрация сразу при изменении чекбокса
     const filteredProducts = OsbProducts.filter((product) => {
       const matchesPrice = product.newPrice >= filters.price[0] && product.newPrice <= filters.price[1];
-      return matchesPrice;
+      const matchesTypeFilter = newTypeFilter ? product.type === "влагостойкий" : true;
+      return matchesPrice && matchesTypeFilter;
     });
 
-    // Отправляем отфильтрованные продукты родительскому компоненту
+    onFilterChange(filteredProducts);
+  };
+
+  const handleFilterClick = () => {
+    const filteredProducts = OsbProducts.filter((product) => {
+      const matchesPrice = product.newPrice >= filters.price[0] && product.newPrice <= filters.price[1];
+      const matchesTypeFilter = filters.typeFilter ? product.type === "влагостойкий" : true;
+      return matchesPrice && matchesTypeFilter;
+    });
+
     onFilterChange(filteredProducts);
   };
 
@@ -57,11 +78,21 @@ const FilterPrix = ({ category, OsbProducts, onFilterChange }) => {
       >
         Фильтровать
       </button>
+
+      <div className="border-t border-black mt-4"></div>
+
+      <TypeFilter 
+        typeFilter={filters.typeFilter}
+        onTypeFilterChange={handleTypeFilterChange}
+      />
     </div>
   );
 };
 
 export default FilterPrix;
+
+
+
 
 
 

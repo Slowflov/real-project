@@ -11,9 +11,9 @@ const ProductCard = ({
   code,
   quantity,
   customPrice,
-  productId, // Добавляем productId для перехода на страницу товара
+  productId,
 }) => {
-    console.log("img из JSON:", img);
+    // console.log("img из JSON:", img);
   return (
     <Link to={`/product/${productId}`} className="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
       <img src={img} alt={name} className="w-full h-60 object-cover" />
@@ -34,12 +34,13 @@ const ProductCard = ({
             <div className="text-3xl font-semibold text-red-500">{newPrice} грн</div>
           </div>
           <div
-  className={`text-lg text-white px-3 py-3 rounded-md ${
+  className={`text-lg text-white px-3 py-3 rounded-md whitespace-nowrap ${
     availability === "Отсутствует" ? "bg-red-400" : "bg-green-300"
   }`}
 >
   {availability}
 </div>
+
         </div>
       </div>
 
