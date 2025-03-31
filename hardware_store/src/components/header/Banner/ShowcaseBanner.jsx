@@ -15,13 +15,13 @@ const ShowcaseBanner = () => {
 
   useEffect(() => {
     if (isHovered) return;
-    const interval = setInterval(nextSlide, 5554000);
+    const interval = setInterval(nextSlide,4000);
     return () => clearInterval(interval);
   }, [isHovered]);
 
   return (
-    <section
-      className="relative w-full h-[500px] overflow-hidden px-5 rounded-lg"
+<section
+  className="relative w-full max-w-[1250px] h-[500px] overflow-hidden px-5 rounded-lg mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

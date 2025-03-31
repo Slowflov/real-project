@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OsbProducts from "../../../data/OsbProducts.json";
 import ProductCard from "../../../components/card/ProductCard";
-import FilterPrix from "../../card/filterPrice";
+import FilterPrix from "../../card/FilterPanel";
 
 const OsbPage = () => {
   const [filteredProducts, setFilteredProducts] = useState(OsbProducts); // Изначально все товары
@@ -23,7 +23,7 @@ const OsbPage = () => {
   <div className="flex flex-col md:flex-row">
     {/* Фильтр (будет сверху на мобильных) */}
     <div className="md:w-[50%] w-full mb-4 md:mb-0 mr-6">
-      <FilterPrix category="osb" OsbProducts={OsbProducts} onFilterChange={handleFilterChange} />
+      <FilterPrix category="osb" products={OsbProducts} onFilterChange={handleFilterChange} />
     </div>
 
     {/* Сетка товаров */}

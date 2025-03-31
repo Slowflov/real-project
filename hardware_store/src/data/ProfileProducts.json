@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "img": "profil_1.png",
+      "name": "Профиль Knauf CD-60 0,6мм 3м усиленный",
+      "oldPrice": 204,
+      "newPrice": "196,5",
+      "availability": "В наличии",
+      "code": "707",
+      "quantity": 10,
+      "customPrice": 194,
+      "type": "CD-профиль",
+      "category": "profil"
+    },
+    {
+        "id": 2,
+        "img": "profil_2.png",
+        "name": "Профиль CD 0,5 мм 3 м усиленный",
+        "oldPrice": "87,50",
+        "newPrice": "86,50",
+        "availability": "В наличии",
+        "code": "741",
+        "quantity": 10,
+        "customPrice": "81,5",
+        "type": "CD-профиль",
+        "category": "profil"
+      },
+      {
+        "id": 3,
+        "img": "profil_3.png",
+        "name": "Профиль CW-100 0,4мм 4м",
+        "oldPrice": 187,
+        "newPrice": "185,5",
+        "availability": "В наличии",
+        "code": "1249",
+        "quantity": 10,
+        "customPrice": "181,5",
+        "type": "CW-профиль",
+        "category": "profil"
+      },
+      {
+        "id": 4,
+        "img": "profil_4.png",
+        "name": "Профиль UD 0,6мм 3м направляющий",
+        "oldPrice": 79,
+        "newPrice": 65,
+        "availability": "Отсутствует",
+        "code": "1311",
+        "quantity": 10,
+        "customPrice": "62,5",
+        "type": "UD-профиль",
+        "category": "profil"
+      },
+      {
+        "id": 5,
+        "img": "profil_5.png",
+        "name": "Профиль для гипсокартона CD-60 0,4мм 3м",
+        "oldPrice": 70,
+        "newPrice": 68,
+        "availability": "В наличии",
+        "code": "720",
+        "quantity": 10,
+        "customPrice": "65,5",
+        "type": "CD-профиль",
+        "category": "profil"
+      },
+      {
+        "id": 6,
+        "img": "profil_6.png",
+        "name": "Профиль UW-75 0,4мм 3м направляющий",
+        "oldPrice": 99,
+        "newPrice": 91,
+        "availability": "В наличии",
+        "code": "1406",
+        "quantity": 10,
+        "customPrice": "88,5",
+        "type": "UW-профиль",
+        "category": "profil"
+      },
+      {
+        "id": 7,
+        "img": "profil_3.png",
+        "name": "Профіль CW-100 0,5мм 4м посилений",
+        "oldPrice": 228,
+        "newPrice": 217,
+        "availability": "В наличии",
+        "code": "1209",
+        "quantity": 10,
+        "customPrice": 210,
+        "type": "CW-профиль",
+        "category": "profil"
+      }
+  ]

@@ -10,6 +10,7 @@ import ContactSection from "../Contact/ContactSection";
 import Footer from "../Footer/Footer";
 import CatalogList from "../catalog/CatalogList";
 import OsbPage from "../catalog/osb/OsbPage";
+import Profile from "../catalog/profil/ProfilePage"
 
 const Header = () => {
   return (
@@ -19,7 +20,8 @@ const Header = () => {
       <div className="bg-gray-100 pt-5">
         <Routes>
           <Route path="/catalog" element={<CatalogList />} />
-          <Route path="/category/:id" element={<OsbPage />} />
+          <Route path="/category/osb" element={<OsbPage />} />
+          <Route path="/category/profil" element={<Profile />} />
           <Route
             path="/*"
             element={

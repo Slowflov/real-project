@@ -20,9 +20,10 @@ const Banner4 = () => (
             </div>
 
             {/* Правая часть с картинкой */}
-            <div className="w-1/2 h-full flex items-center justify-end pr-6 slide-in-right">
-                <img src={baumit} alt="UDK" className="w-108 h-auto" />
-            </div>
+<div className="w-1/2 h-full flex items-center justify-end pr-6 slide-in-right">
+  <img src={baumit} alt="UDK" className="w-full max-w-full h-auto" />
+</div>
+
         </div>
     </div>
 );
