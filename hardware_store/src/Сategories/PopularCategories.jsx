@@ -20,7 +20,7 @@ const categories = [
   { id: 2, name: "Гипсокартон", img: cat2, link: "/category/2" },
   { id: 3, name: "Цемент", img: cat3, link: "/category/3" },
   { id: 4, name: "OSB", img: cat4, link: "/category/osb" },
-  { id: 5, name: "Шпаклевка", img: cat5, link: "/category/5" },
+  { id: 5, name: "Шпаклевка", img: cat5, link: "/category/putty" },
   { id: 6, name: "Кровельные материалы", img: cat6, link: "/category/6" },
   { id: 7, name: "Грунтовка", img: cat7, link: "/category/7" },
   { id: 8, name: "Пенопласт", img: cat8, link: "/category/8" },

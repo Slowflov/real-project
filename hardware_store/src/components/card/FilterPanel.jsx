@@ -3,25 +3,33 @@ import PriceRangeFilter from "./PriceRangeFilter";
 import TypeFilter from "./TypeFilter";
 
 const priceRanges = {
-  osb: [300, 500],
-  profile: [50, 400],
-  paint: [20, 1500],
+  osb: [0, 500],
+  profile: [0, 400],
+  putty: [0, 1500],
 };
 
 const typeFilters = {
   osb: ["влагостойкий"],
   profile: ["CD-профиль", "UD-профиль", "CW-профиль", "UW-профиль"],
+  putty: ["Акриловая", "Гипсовая", "Полимерная", "Цементная"],
 };
 
 const FilterPanel = ({ category, products, onFilterChange }) => {
   const [filters, setFilters] = useState({
     price: priceRanges[category] || [0, 10000],
-    typeFilter: [], // Массив выбранных типов
+    typeFilter: [],
   });
 
   useEffect(() => {
     setFilters({ price: priceRanges[category] || [0, 10000], typeFilter: [] });
   }, [category]);
+
+  // Подсчет количества товаров для каждого типа
+  const typeCounts = products.reduce((acc, product) => {
+    const productType = product.type.trim().toLowerCase();
+    acc[productType] = (acc[productType] || 0) + 1;
+    return acc;
+  }, {});
 
   const handlePriceChange = (value) => {
     setFilters((prevFilters) => ({
@@ -35,10 +43,9 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
 
     setFilters((prevFilters) => {
       const newTypeFilter = prevFilters.typeFilter.includes(selectedType)
-        ? prevFilters.typeFilter.filter((type) => type !== selectedType) // Убираем, если был
-        : [...prevFilters.typeFilter, selectedType]; // Добавляем новый тип
+        ? prevFilters.typeFilter.filter((type) => type !== selectedType)
+        : [...prevFilters.typeFilter, selectedType];
 
-      // Сразу применяем фильтрацию при изменении чекбокса
       applyFilters(newTypeFilter);
 
       return {
@@ -49,7 +56,6 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
   };
 
   const handleFilterClick = () => {
-    // Важно: при клике на кнопку, фильтрация также должна применяться
     applyFilters(filters.typeFilter);
   };
 
@@ -58,7 +64,6 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
       const productPrice = parseFloat(product.newPrice);
       const matchesPrice = productPrice >= filters.price[0] && productPrice <= filters.price[1];
 
-      // Приводим типы к нижнему регистру для корректного сравнения
       const productType = product.type.trim().toLowerCase();
       const typeFilterLower = typeFilter.map(type => type.trim().toLowerCase());
 
@@ -82,7 +87,7 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
       />
 
       <button
-        onClick={handleFilterClick} // Кнопка остается
+        onClick={handleFilterClick}
         className="w-full bg-yellow-500 hover:bg-yellow-400 text-white py-2 px-4 rounded-md cursor-pointer mt-4"
       >
         Фильтровать
@@ -91,15 +96,17 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
       <div className="border-t border-black mt-4"></div>
 
       <TypeFilter
-        availableTypes={typeFilters[category]} // Передаем доступные типы для текущей категории
-        selectedTypes={filters.typeFilter} // Массив выбранных типов
-        onTypeFilterChange={handleTypeFilterChange} // Обработчик изменения фильтра
+        availableTypes={typeFilters[category]}
+        typeCounts={typeCounts} // Передаем количество товаров
+        selectedTypes={filters.typeFilter}
+        onTypeFilterChange={handleTypeFilterChange}
       />
     </div>
   );
 };
 
 export default FilterPanel;
+
 
 
 
