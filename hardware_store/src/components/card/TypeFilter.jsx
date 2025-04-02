@@ -14,7 +14,7 @@ const TypeFilter = ({ availableTypes, selectedTypes, onTypeFilterChange }) => {
             value={type}
             className="mr-2 scale-250"
           />
-          <label htmlFor={type} className="text-xl pl-4">{type}</label>
+          <label htmlFor={type} className="text-xl pl-4 pb-2 whitespace-nowrap">{type}</label>
         </div>
       ))}
     </div>

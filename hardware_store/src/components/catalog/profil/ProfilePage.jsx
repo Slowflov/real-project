@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import ProfileProducts from "../../../data/ProfileProducts.json";
 import ProductCard from "../../../components/card/ProductCard";
 import FilterPrix from "../../card/FilterPanel";
+import Pagination from "../../card/Pagination";
 
 const ProfilePage = () => {
   const [filteredProducts, setFilteredProducts] = useState(ProfileProducts);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 9; // Количество товаров на странице
 
   const handleFilterChange = (filteredProducts) => {
     setFilteredProducts(filteredProducts);
+    setCurrentPage(1); // Сброс на первую страницу при фильтрации
   };
+
+  // Вычисляем индексы для отображаемых товаров
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   return (
     <div className="max-w-[1400px] mx-auto p-4">
@@ -25,7 +34,7 @@ const ProfilePage = () => {
         </div>
 
         <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProducts.map((product) => (
+          {currentProducts.map((product) => (
             <ProductCard
               key={product.id}
               className="w-full"
@@ -41,8 +50,16 @@ const ProfilePage = () => {
           ))}
         </div>
       </div>
+
+      {/* Добавляем пагинацию */}
+      <Pagination
+        totalPages={Math.ceil(filteredProducts.length / productsPerPage)}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };
 
 export default ProfilePage;
+

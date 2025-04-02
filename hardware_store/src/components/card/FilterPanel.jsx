@@ -9,8 +9,8 @@ const priceRanges = {
 };
 
 const typeFilters = {
-  osb: ["влагостойкий"], // Пример для категории OSB
-  profile: ["CD-профиль", "UD-профиль", "CW-профиль"],
+  osb: ["влагостойкий"],
+  profile: ["CD-профиль", "UD-профиль", "CW-профиль", "UW-профиль"],
 };
 
 const FilterPanel = ({ category, products, onFilterChange }) => {

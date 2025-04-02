@@ -16,10 +16,10 @@ import cat11 from "../assets/image/category/cat_11.png";
 import cat12 from "../assets/image/category/cat_12.png";
 
 const categories = [
-  { id: 1, name: "Профиль", img: cat1, link: "/category/1" },
+  { id: 1, name: "Профиль", img: cat1, link: "/category/profil" },
   { id: 2, name: "Гипсокартон", img: cat2, link: "/category/2" },
   { id: 3, name: "Цемент", img: cat3, link: "/category/3" },
-  { id: 4, name: "OSB", img: cat4, link: "category/osb" },
+  { id: 4, name: "OSB", img: cat4, link: "/category/osb" },
   { id: 5, name: "Шпаклевка", img: cat5, link: "/category/5" },
   { id: 6, name: "Кровельные материалы", img: cat6, link: "/category/6" },
   { id: 7, name: "Грунтовка", img: cat7, link: "/category/7" },
