@@ -11,7 +11,9 @@
     "noImplicitAny": true,         
     "strictNullChecks": true,      
     "strictFunctionTypes": true,   
-    "strictBindCallApply": true    
+    "strictBindCallApply": true,
+    "declaration": true,           
+    "noEmit": false                 
   },
   "files": [],
   "references": [
@@ -20,5 +22,6 @@
   ],
   "include": ["src"]
 }
+
 
 
