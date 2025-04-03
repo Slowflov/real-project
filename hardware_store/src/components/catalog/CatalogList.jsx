@@ -23,7 +23,7 @@ import catalog21 from "../../assets/image/category/cat_20.jpeg";
 import catalog22 from "../../assets/image/category/cat_22.webp";
 
 const categories = [
-  { id: 1, name: "OSB плиты", img: catalog1, link: "/category/osb" },
+  { id: 1, name: "OSB плиты", img: catalog1, link: "/category/osb" }, 
   { id: 2, name: "Шпаклевка", img: catalog2, link: "/category/putty" },
   { id: 3, name: "Гипсокартон", img: catalog3, link: "/catalog/gipsokarton" },
   { id: 4, name: "Цемент", img: catalog4, link: "/catalog/cement" },
@@ -46,7 +46,7 @@ const categories = [
   { id: 21, name: "Силиконы и герметики", img: catalog21, link: "/catalog/silikony-i-germetiki" },
   { id: 22, name: "Сетки", img: catalog22, link: "/catalog/setki" },
 ];
-
+ 
 const CatalogList = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
