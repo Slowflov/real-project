@@ -13,6 +13,7 @@ import CatalogList from "../catalog/CatalogList";
 import OsbPage from "../catalog/osb/OsbPage";
 import Profile from "../catalog/profil/ProfilePage";
 import Putty from "../catalog/putty/PuttyPage";
+import Cement from "../catalog/cement/CementPage";
 
 const Header = () => {
   return (
@@ -25,6 +26,7 @@ const Header = () => {
           <Route path="/category/osb" element={<OsbPage />} />
           <Route path="/category/profil" element={<Profile />} />
           <Route path="/category/putty" element={<Putty />} />
+          <Route path="/category/cement" element={<Cement />} />
           <Route
             path="/*"
             element={

@@ -2,30 +2,41 @@ import bannerImage4 from "../../../assets/image/banner/banner_4.jpeg";
 import baumit from '../../../assets/image/banner/banner_img_4.webp';
 
 const Banner4 = () => (
-    <div className="w-full h-[500px] rounded-lg overflow-hidden flex-shrink-0 relative bg-cover bg-center" style={{ backgroundImage: `url(${bannerImage4})` }}>
-        <div className="absolute inset-0 bg-black/20 flex items-center justify-between text-white p-6">
-            {/* Левая часть текста */}
-            <div className="flex flex-col justify-start items-center space-y-4 w-1/2">
-                <h2 className="absolute top-0 left-0 w-full text-center text-6xl font-bold text-white py-4">
-                    Шок цена 👍
-                </h2>
+<div
+  className="w-full h-[500px] rounded-lg overflow-hidden flex-shrink-0 relative bg-cover bg-center"
+  style={{ backgroundImage: `url(${bannerImage4})` }}
+>
+  <div className="absolute inset-0 bg-black/20 text-white p-6 flex flex-col lg:flex-row items-center justify-center lg:justify-between">
 
-                {/* Текст с анимацией */}
-                <div className="space-y-2 text-2xl font-semibold text-center mx-auto pt-12 slide-in-left">
-                    <p className="text-4xl">Клей эластичный <span className="text-black text-4xl">Baumit</span></p>
-                    <p className="text-4xl"><span className="text-black text-4xl">Flex</span><span className="text-red-500 text-4xl">Top</span> для всех видов</p>
-                    <p className="text-4xl">плитки и камня</p>
-                    <p className="text-5xl pt-8">568 грн</p>
-                </div>
-            </div>
+    {/* Заголовок */}
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center w-full py-2 lg:absolute lg:top-0">
+      Шок цена 👍
+    </h2>
 
-            {/* Правая часть с картинкой */}
-<div className="w-1/2 h-full flex items-center justify-end pr-6 slide-in-right">
-  <img src={baumit} alt="UDK" className="w-full max-w-full h-auto" />
+    {/* Контент: Картинка + Текст */}
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full pt-8 lg:pt-0">
+
+      {/* Левая часть с текстом */}
+      <div className="text-center space-y-2 lg:space-y-2 md:space-y-1 sm:space-y-1 mb-0 lg:mb-0 md:mb-15 sm:mb-10 w-full lg:w-1/2 slide-in-left">
+        <p className="text-2xl sm:text-3xl md:text-3xl">
+          Клей эластичный <span className="text-black">Baumit</span>
+        </p>
+        <p className="text-2xl sm:text-3xl md:text-3xl">
+          <span className="text-black">Flex</span>
+          <span className="text-red-500">Top</span> для всех видов
+        </p>
+        <p className="text-2xl sm:text-3xl md:text-3xl">плитки и камня</p>
+        <p className="text-3xl sm:text-4xl md:text-4xl pt-2 lg:pt-4 md:pt-1 sm:pt-1 font-bold">568 грн</p>
+      </div>
+
+      {/* Правая часть с картинкой */}
+      <div className="w-full lg:w-1/2 flex justify-center items-center pb-4 lg:pb-0 md:pb-0 sm:pb-0 slide-in-right">
+        <img src={baumit} alt="Baumit" className="w-50 lg:w-96 md:w-70 sm:w-64 object-contain" />
+      </div>
+    </div>
+  </div>
 </div>
 
-        </div>
-    </div>
 );
 
 export default Banner4;

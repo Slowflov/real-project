@@ -12,6 +12,7 @@ const typeFilters = {
   osb: ["влагостойкий"],
   profile: ["CD-профиль", "UD-профиль", "CW-профиль", "UW-профиль"],
   putty: ["Акриловая", "Гипсовая", "Полимерная", "Цементная"],
+  cement: ["M-400", "M-500", "M-550"],
 };
 
 const FilterPanel = ({ category, products, onFilterChange }) => {

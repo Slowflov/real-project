@@ -3,31 +3,35 @@ import plitonit from '../../../assets/image/banner/banner_img_5.png';
 
 const Banner5 = () => {
     return (
-        <div
-            className="w-full h-[500px] rounded-lg overflow-hidden flex-shrink-0 relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${background5})` }}>
+<div
+  className="w-full h-[500px] rounded-lg overflow-hidden flex-shrink-0 relative bg-cover bg-center"
+  style={{ backgroundImage: `url(${background5})` }}
+>
+  <div className="absolute inset-0 bg-black/10 flex flex-col text-white p-6 
+                  lg:justify-between lg:items-start md:items-center md:justify-center">
 
-            <div className="absolute inset-0 bg-black/10 flex flex-col justify-between text-white p-6">
+    {/* Заголовок */}
+    <h2 className="text-2xl lg:text-6xl md:text-4xl sm:text-3xl font-bold text-center md:order-1 mt-0 lg:mt-0 md:mt-12">
+      <span>Поспешите купить 💥</span><br />
+    </h2>
 
-                {/* Основной заголовок */}
-                <h2 className="text-6xl font-bold mt-2 text-center ">
-                    <span>Поспешите купить 💥</span><br />
-                </h2>
+    {/* Картинка */}
+    <div className="lg:absolute lg:right-36 lg:bottom-14 flex-grow flex justify-center md:justify-center sm:justify-center xs:justify-center md:order-2">
+      <img src={plitonit} alt="Plitonit" className="w-38 lg:w-56 md:w-42 sm:w-38 h-auto" />
+    </div>
 
-                <div className="flex justify-end items-center w-full h-full text-right pr-35 pb-8">
-                    <div className="text-center text-4xl tracking-tight text-white slide-in-left">
-                        <p>Плиточный клей <span className="text-blue-300">Plitonit</span></p>
-                        <p>для внутренних работ по</p>
-                        <p>супер низкой цене</p>
-                        <p className="text-yellow-500 text-5xl pt-8">164,5 грн</p>
-                    </div>
-                </div>
+    {/* Текст с ценой */}
+    <div className="space-y-1 ml-1 lg:ml-12 md:ml-6 sm:ml-2 mb-10 text-xl lg:text-4xl md:text-3xl sm:text-2xl tracking-tight slide-in-left text-center md:order-3">
+      <p>
+        Плиточный клей <span className="text-blue-300 font-semibold">Plitonit</span>
+      </p>
+      <p>для внутренних работ по</p>
+      <p>супер низкой цене</p>
+      <p className="text-yellow-500 text-3xl lg:text-5xl pt-4 lg:pt-4 md:pt-1 font-bold">164,5 грн</p>
+    </div>
+  </div>
+</div>
 
-                <div className="absolute ml-32 mb-2 bottom-5 slide-in-right">
-                    <img src={plitonit} alt="Knauf logo" className="w-54 h-auto" />
-                </div>
-            </div>
-        </div>
     );
 };
 

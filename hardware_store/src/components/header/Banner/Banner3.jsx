@@ -2,30 +2,38 @@ import bannerImage3 from "../../../assets/image/banner/banner_3.jpeg";
 import glue from '../../../assets/image/banner/banner_img_3.png';
 
 const Banner3 = () => (
-  <div className="w-full h-[500px] rounded-lg overflow-hidden flex-shrink-0 relative bg-cover bg-center" style={{ backgroundImage: `url(${bannerImage3})` }}>
-    <div className="absolute inset-0 bg-black/20 flex items-center justify-between text-white p-6">
-      {/* Левая часть текста */}
-      <div className="flex flex-col justify-start items-center space-y-4 w-1/2">
-        <h2 className="absolute top-0 left-0 w-full text-center text-5xl font-bold text-white py-4">
-          Высококачественные смеси <span className="text-yellow-500">UDK</span> уже в нашем ассортименте
-        </h2>
+<div
+  className="w-full h-[500px] rounded-lg overflow-hidden flex-shrink-0 relative bg-cover bg-center"
+  style={{ backgroundImage: `url(${bannerImage3})` }}
+>
+  {/* Затемнение */}
+  <div className="absolute inset-0 bg-black/20 flex flex-col text-white p-6 
+                  lg:justify-between lg:items-start md:items-center md:justify-center">
 
-        {/* Текст с анимацией */}
-        <div className="space-y-2 text-2xl font-semibold text-center mx-auto pt-12 slide-in-left">
-          <p>Штукатурка UDK MP1 - 164 грн</p>
-          <p>Клей для плитки UDK TG Basic - 178 грн</p>
-          <p>Клей для плитки UDK TG Standart - 274 грн</p>
-          <p>Армирующий клей UDK TGR - 232 грн</p>
-          <p>Клеевая смесь UDJ TIG - 209 грн</p>
-        </div>
-      </div>
+    {/* Заголовок */}
+    <h2 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl font-bold mt-[-18px] lg:mt-6 md:mt-10 text-center md:text-center lg:text-left md:order-1">
+      Высококачественные смеси{" "}
+      <span className="text-yellow-500">UDK</span> <br />
+      уже в нашем ассортименте
+    </h2>
 
-      {/* Правая часть с картинкой */}
-      <div className="w-1/2 h-full flex items-center justify-end pr-6">
-        <img src={glue} alt="UDK" className="w-108 h-auto" />
-      </div>
+    {/* Картинка */}
+    <div className="lg:absolute lg:right-12 lg:bottom-5 flex-grow flex justify-center md:justify-center md:order-2 mt-6 mb-4">
+      <img src={glue} alt="UDK" className="w-44 lg:w-[400px] md:w-80 sm:w-72 h-auto" />
     </div>
+
+    {/* Список цен */}
+    <div className="space-y-1 lg:ml-12 md:ml-6 sm:ml-2 mb-10 text-lg lg:text-2xl md:text-xl sm:text-lg tracking-tight slide-in-left text-center md:text-center lg:text-left md:order-3">
+      <p>Штукатурка UDK MP1 - <span className="font-semibold">164 грн</span></p>
+      <p>Клей для плитки UDK TG Basic - <span className="font-semibold">178 грн</span></p>
+      <p>Клей для плитки UDK TG Standart - <span className="font-semibold">274 грн</span></p>
+      <p>Армирующий клей UDK TGR - <span className="font-semibold">232 грн</span></p>
+      <p>Клеевая смесь UDJ TIG - <span className="font-semibold">209 грн</span></p>
+    </div>
+
   </div>
+</div>
+
 );
 
 export default Banner3;

@@ -26,7 +26,7 @@ const categories = [
   { id: 1, name: "OSB плиты", img: catalog1, link: "/category/osb" }, 
   { id: 2, name: "Шпаклевка", img: catalog2, link: "/category/putty" },
   { id: 3, name: "Гипсокартон", img: catalog3, link: "/catalog/gipsokarton" },
-  { id: 4, name: "Цемент", img: catalog4, link: "/catalog/cement" },
+  { id: 4, name: "Цемент", img: catalog4, link: "/category/cement" },
   { id: 5, name: "Профиль", img: catalog5, link: "/category/profil" },
   { id: 6, name: "Грунтовка", img: catalog6, link: "/catalog/gruntovka" },
   { id: 7, name: "Кровельные материалы", img: catalog7, link: "/catalog/krovelnie-materialy" },
