@@ -13,7 +13,7 @@ const MainSections = () => {
           <div className="w-3 h-0.5 bg-black"></div>
           <div className="w-3 h-0.5 bg-black"></div>
         </div>
-        {/* Текст кнопки, скрытый на экранах меньше 640px */}
+        {/* Текст кнопки*/}
         <span className="hidden sm:block">Каталог</span>
       </button>
     </Link> 
@@ -23,29 +23,29 @@ const MainSections = () => {
   <ul className="flex space-x-4 sm:space-x-12">
     {/* Пункт Акции */}
     <li>
-      <a href="#catalog" className="text-base sm:text-lg hover:text-yellow-500">
+      <a href="/Promo" className="text-base sm:text-lg hover:text-yellow-500">
         Акции
       </a>
     </li>
 
     {/* Пункт Возврат и обмен */}
     <li>
-      <a href="#discounts" className="text-base sm:text-lg hover:text-yellow-500">
+      <a href="/RetExEnch" className="text-base sm:text-lg hover:text-yellow-500">
         Возврат и обмен
       </a>
     </li>
 
     {/* Пункт Контакты */}
     <li>
-      <a href="#contacts" className="text-base sm:text-lg hover:text-yellow-500">
+      <a href="/LocationInfo" className="text-base sm:text-lg hover:text-yellow-500">
         Контакты
       </a>
     </li>
 
     {/* Пункт Оплата */}
     <li>
-      <a href="#payment" className="text-base sm:text-lg hover:text-yellow-500">
-        Оплата
+      <a href="/PayAndDel" className="text-base sm:text-lg hover:text-yellow-500">
+        Оплата и доставка
       </a>
     </li>
   </ul>

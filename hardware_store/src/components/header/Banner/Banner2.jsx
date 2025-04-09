@@ -16,7 +16,7 @@ const Banner2 = () => (
     </h2>
 
     {/* Уточнение (при покупке от 5 шт) */}
-    <div className="text-xs lg:text-sm font-semibold mt-2 lg:mt-0 text-center lg:text-right md:order-2">
+    <div className="text-xs lg:text-sm font-semibold mt-2 mr-2 lg:mr-12 md:mr-2 sm:mr-2 lg:mt-0 text-center lg:text-right md:order-2">
       <p>*при покупке от 5 шт</p>
     </div>
 

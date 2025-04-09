@@ -6,6 +6,8 @@ const priceRanges = {
   osb: [0, 500],
   profile: [0, 400],
   putty: [0, 1500],
+  promo: [0, 1000],
+  drywall: [0, 500],
 };
 
 const typeFilters = {
@@ -13,6 +15,7 @@ const typeFilters = {
   profile: ["CD-профиль", "UD-профиль", "CW-профиль", "UW-профиль"],
   putty: ["Акриловая", "Гипсовая", "Полимерная", "Цементная"],
   cement: ["M-400", "M-500", "M-550"],
+  drywall: ["влагостойкий", "обычный"]
 };
 
 const FilterPanel = ({ category, products, onFilterChange }) => {
@@ -25,7 +28,6 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
     setFilters({ price: priceRanges[category] || [0, 10000], typeFilter: [] });
   }, [category]);
 
-  // Подсчет количества товаров для каждого типа
   const typeCounts = products.reduce((acc, product) => {
     const productType = product.type.trim().toLowerCase();
     acc[productType] = (acc[productType] || 0) + 1;

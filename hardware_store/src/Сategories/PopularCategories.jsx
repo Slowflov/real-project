@@ -17,7 +17,7 @@ import cat12 from "../assets/image/category/cat_12.png";
 
 const categories = [
   { id: 1, name: "Профиль", img: cat1, link: "/category/profil" },
-  { id: 2, name: "Гипсокартон", img: cat2, link: "/category/2" },
+  { id: 2, name: "Гипсокартон", img: cat2, link: "/category/drywall" },
   { id: 3, name: "Цемент", img: cat3, link: "/category/cement" },
   { id: 4, name: "OSB", img: cat4, link: "/category/osb" },
   { id: 5, name: "Шпаклевка", img: cat5, link: "/category/putty" },
