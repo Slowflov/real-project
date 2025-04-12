@@ -1,0 +1,54 @@
+[
+    {
+      "id": 1,
+      "img": "plywood_1.png",
+      "name": "Лист фанеры 1520х1520х4,5мм",
+      "oldPrice": 435,
+      "newPrice": 431,
+      "availability": "В наличии",
+      "code": "260",
+      "quantity": 3,
+      "customPrice": 409,
+      "type": "",
+      "category": "plywood"
+    },
+    {
+      "id": 2,
+      "img": "plywood_2.png",
+      "name": "Лист ДВП 2440х1220 толщина 2,5мм",
+      "oldPrice": 257,
+      "newPrice": "224,5",
+      "availability": "В наличии",
+      "code": "673",
+      "quantity": 3,
+      "customPrice": 220,
+      "type": "ДВП",
+      "category": "plywood"
+    },
+    {
+      "id": 3,
+      "img": "plywood_1.png",
+      "name": "Лист фанеры 1520х1520х8мм",
+      "oldPrice": 776,
+      "newPrice": 770,
+      "availability": "В наличии",
+      "code": "271",
+      "quantity": 3,
+      "customPrice": 755,
+      "type": "",
+      "category": "plywood"
+    },
+    {
+      "id": 4,
+      "img": "plywood_1.png",
+      "name": "Лист фанеры 1520х1520х10мм",
+      "oldPrice": 950,
+      "newPrice": "944,5",
+      "availability": "В наличии",
+      "code": "266",
+      "quantity": 3,
+      "customPrice": 932,
+      "type": "",
+      "category": "plywood"
+    }
+]

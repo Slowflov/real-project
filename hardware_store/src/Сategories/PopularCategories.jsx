@@ -21,12 +21,12 @@ const categories = [
   { id: 3, name: "Цемент", img: cat3, link: "/category/cement" },
   { id: 4, name: "OSB", img: cat4, link: "/category/osb" },
   { id: 5, name: "Шпаклевка", img: cat5, link: "/category/putty" },
-  { id: 6, name: "Кровельные материалы", img: cat6, link: "/category/6" },
-  { id: 7, name: "Грунтовка", img: cat7, link: "/category/7" },
-  { id: 8, name: "Пенопласт", img: cat8, link: "/category/8" },
-  { id: 9, name: "Краска", img: cat9, link: "/category/9" },
-  { id: 10, name: "Газоблоки UDK", img: cat10, link: "/category/10" },
-  { id: 11, name: "ДВП и фанера", img: cat11, link: "/category/11" },
+  { id: 6, name: "Кровельные материалы", img: cat6, link: "/category/roofing" },
+  { id: 7, name: "Грунтовка", img: cat7, link: "/category/primer" },
+  { id: 8, name: "Пенопласт", img: cat8, link: "/category/foam" },
+  { id: 9, name: "Краска", img: cat9, link: "/category/paint" },
+  { id: 10, name: "Газоблоки UDK", img: cat10, link: "/category/gasblock" },
+  { id: 11, name: "ДВП и фанера", img: cat11, link: "/category/plywood" },
   { id: 12, name: "Утеплитель", img: cat12, link: "/category/12" },
 ];
 

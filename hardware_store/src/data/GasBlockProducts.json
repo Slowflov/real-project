@@ -1,0 +1,80 @@
+[
+    {
+      "id": 1,
+      "img": "gasblock_1.png",
+      "name": "Газобетонный U-блок D-400 600x200x375 мм",
+      "oldPrice": 260,
+      "newPrice": 250,
+      "availability": "В наличии",
+      "code": "628",
+      "quantity": 10,
+      "customPrice": 134,
+      "type": "",
+      "category": "gasblock"
+    },
+    {
+      "id": 2,
+      "img": "gasblock_1.png",
+      "name": "Газобетонный U-блок D-400 500x200x300 мм",
+      "oldPrice": 237,
+      "newPrice": 230,
+      "availability": "В наличии",
+      "code": "651",
+      "quantity": 10,
+      "customPrice": 226,
+      "type": "",
+      "category": "gasblock"
+    },
+    {
+      "id": 3,
+      "img": "gasblock_1.png",
+      "name": "Газобетонный U-блок D-400 500x200x400 мм",
+      "oldPrice": 237,
+      "newPrice": 230,
+      "availability": "В наличии",
+      "code": "630",
+      "quantity": 10,
+      "customPrice": 226,
+      "type": "",
+      "category": "gasblock"
+    },
+    {
+      "id": 4,
+      "img": "gasblock_1.png",
+      "name": "Газоблок UDK D-400 600x200x400 мм",
+      "oldPrice": 500,
+      "newPrice": 480,
+      "availability": "В наличии",
+      "code": "648",
+      "quantity": 4,
+      "customPrice": 470,
+      "type": "",
+      "category": "gasblock"
+    },
+    {
+      "id": 5,
+      "img": "gasblock_1.png",
+      "name": "Газоблок UDK D-400 600x200x150мм",
+      "oldPrice": 80,
+      "newPrice": "73,5",
+      "availability": "В наличии",
+      "code": "635",
+      "quantity": 10,
+      "customPrice": "70,5",
+      "type": "",
+      "category": "gasblock"
+    },
+    {
+        "id": 6,
+        "img": "gasblock_1.png",
+        "name": "Газоблок UDK D-400 600x200x250мм",
+        "oldPrice": 113,
+        "newPrice": 89,
+        "availability": "В наличии",
+        "code": "659",
+        "quantity": 10,
+        "customPrice": 84,
+        "type": "",
+        "category": "gasblock"
+      }
+  ]

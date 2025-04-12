@@ -8,6 +8,12 @@ const priceRanges = {
   putty: [0, 1500],
   promo: [0, 1000],
   drywall: [0, 500],
+  roofing: [0, 2000],
+  primer: [0, 1000],
+  gasblock: [0, 500],
+  foam: [0, 300],
+  plywood: [0, 1000],
+  paint: [0, 2000],
 };
 
 const typeFilters = {
@@ -15,7 +21,8 @@ const typeFilters = {
   profile: ["CD-профиль", "UD-профиль", "CW-профиль", "UW-профиль"],
   putty: ["Акриловая", "Гипсовая", "Полимерная", "Цементная"],
   cement: ["M-400", "M-500", "M-550"],
-  drywall: ["влагостойкий", "обычный"]
+  drywall: ["влагостойкий", "обычный"],
+  plywood: ["ДВП"]
 };
 
 const FilterPanel = ({ category, products, onFilterChange }) => {
@@ -78,6 +85,9 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
     onFilterChange(filteredProducts);
   };
 
+  // Проверяем, есть ли доступные типы для текущей категории
+  const availableTypesForCategory = typeFilters[category];
+
   return (
     <div className="filter-panel bg-white px-6 py-6 rounded-lg shadow-md">
       <h3 className="font-bold text-xl mb-4 w-full text-center">Фильтровать по цене</h3>
@@ -98,17 +108,21 @@ const FilterPanel = ({ category, products, onFilterChange }) => {
 
       <div className="border-t border-black mt-4"></div>
 
-      <TypeFilter
-        availableTypes={typeFilters[category]}
-        typeCounts={typeCounts} // Передаем количество товаров
-        selectedTypes={filters.typeFilter}
-        onTypeFilterChange={handleTypeFilterChange}
-      />
+      {/* Добавляем проверку на наличие типов */}
+      {availableTypesForCategory && availableTypesForCategory.length > 0 && (
+        <TypeFilter
+          availableTypes={availableTypesForCategory}
+          typeCounts={typeCounts} // Передаем количество товаров
+          selectedTypes={filters.typeFilter}
+          onTypeFilterChange={handleTypeFilterChange}
+        />
+      )}
     </div>
   );
 };
 
 export default FilterPanel;
+
 
 
 

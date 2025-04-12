@@ -19,6 +19,12 @@ import Profile from "../catalog/profil/ProfilePage";
 import Putty from "../catalog/putty/PuttyPage";
 import Cement from "../catalog/cement/CementPage";
 import Drywall from "../catalog/drywall/DrywallPage.jsx";
+import Roofing from "../catalog/roofing/RoofingPage.jsx";
+import Primer from "../catalog/primer/PrimerPage.jsx";
+import GasBlock from "../catalog/gasblock/GasBlockPage.jsx";
+import Foam from "../catalog/foam/FoamPage.jsx";
+import Plywood from "../catalog/plywood/PlywoodPage.jsx";
+import Paint from "../catalog/paint/PaintPage.jsx";
 
 const Header = () => {
   return (
@@ -38,6 +44,12 @@ const Header = () => {
           <Route path="/category/putty" element={<Putty />} />
           <Route path="/category/cement" element={<Cement />} />
           <Route path="/category/drywall" element={<Drywall />} />
+          <Route path="/category/roofing" element={<Roofing />} />
+          <Route path="/category/primer" element={<Primer />} />
+          <Route path="/category/gasblock" element={<GasBlock />} />
+          <Route path="/category/foam" element={<Foam />} />
+          <Route path="/category/plywood" element={<Plywood />} />
+          <Route path="/category/paint" element={<Paint />} />
           <Route
             path="/*"
             element={

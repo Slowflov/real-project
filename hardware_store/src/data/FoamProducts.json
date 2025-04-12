@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "img": "foam_1.png",
+      "name": "Пенопласт ПСБ-25 50 мм",
+      "oldPrice": 63,
+      "newPrice": 58,
+      "availability": "В наличии",
+      "code": "6403",
+      "quantity": 20,
+      "customPrice": 57,
+      "type": "",
+      "category": "foam"
+    },
+    {
+      "id": 2,
+      "img": "foam_2.png",
+      "name": "Пенопласт ПСБ-25 толщина 20 мм",
+      "oldPrice": "29,5",
+      "newPrice": 26,
+      "availability": "Отсутствует",
+      "code": "6417",
+      "quantity": 20,
+      "customPrice": 25,
+      "type": "",
+      "category": "foam"
+    },
+    {
+      "id": 3,
+      "img": "foam_2.png",
+      "name": "Пенопласт ПСБ-25 40 мм",
+      "oldPrice": 53,
+      "newPrice": 48,
+      "availability": "В наличии",
+      "code": "6410",
+      "quantity": 20,
+      "customPrice": 47,
+      "type": "",
+      "category": "foam"
+    },
+    {
+      "id": 4,
+      "img": "foam_2.png",
+      "name": "Пенопласт ПСБ-25 100 мм",
+      "oldPrice": 126,
+      "newPrice": "114,5",
+      "availability": "Отсутствует",
+      "code": "6408",
+      "quantity": 20,
+      "customPrice": 113,
+      "type": "",
+      "category": "foam"
+    },
+    {
+      "id": 5,
+      "img": "foam_2.png",
+      "name": "Пенопласт ПСБ-25 20 мм",
+      "oldPrice": 37,
+      "newPrice": 33,
+      "availability": "В наличии",
+      "code": "6284",
+      "quantity": 20,
+      "customPrice": 31,
+      "type": "",
+      "category": "foam"
+    }
+  ]
