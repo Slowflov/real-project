@@ -21,7 +21,7 @@ const CementPage = () => {
       </nav>
 
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-4xl font-bold text-black">Цемент</h1>
+        <h1 className="text-xl sm:text-4xl font-bold text-black">Цемент</h1>
         {/* Добавляем компонент сортировки */}
         <SortProducts
           sortType={sortType}

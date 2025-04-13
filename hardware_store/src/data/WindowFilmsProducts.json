@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "img": "floormixes_1.png",
+      "name": "Coral Pro — 33 самовыравнивающийся пол 25 кг 3-15 мм",
+      "oldPrice": 254,
+      "newPrice": 249,
+      "availability": "В наличии",
+      "code": "5027",
+      "quantity": 10,
+      "customPrice": "246,5",
+      "type": "",
+      "category": "floormixes"
+    },
+    {
+      "id": 2,
+      "img": "floormixes_2.png",
+      "name": "Ceresit CN-69 25 кг самовыравнивающаяся смесь",
+      "oldPrice": 420,
+      "newPrice": "414,5",
+      "availability": "В наличии",
+      "code": "4688",
+      "quantity": 10,
+      "customPrice": 412,
+      "type": "",
+      "category": "floormixes"
+    },
+    {
+      "id": 3,
+      "img": "floormixes_3.png",
+      "name": "Baumit Solido E225 25 кг стяжка для пола",
+      "oldPrice": 117,
+      "newPrice": 114,
+      "availability": "В наличии",
+      "code": "5060",
+      "quantity": 10,
+      "customPrice": 111,
+      "type": "",
+      "category": "floormixes"
+    },
+    {
+      "id": 4,
+      "img": "floormixes_4.png",
+      "name": "Polimin СЦ-5 10-80мм 25кг стяжка цементная армировання",
+      "oldPrice": 150,
+      "newPrice": 144,
+      "availability": "В наличии",
+      "code": "4213",
+      "quantity": 10,
+      "customPrice": 143,
+      "type": "",
+      "category": "floormixes"
+    },
+    {
+      "id": 5,
+      "img": "floormixes_5.png",
+      "name": "Anserglob LFS 73 самовыравнивающаяся смесь 23 кг",
+      "oldPrice": 336,
+      "newPrice": 330,
+      "availability": "В наличии",
+      "code": "5130",
+      "quantity": 10,
+      "customPrice": "328,5",
+      "type": "",
+      "category": "floormixes"
+    }
+  ]

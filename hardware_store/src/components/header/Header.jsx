@@ -25,6 +25,11 @@ import GasBlock from "../catalog/gasblock/GasBlockPage.jsx";
 import Foam from "../catalog/foam/FoamPage.jsx";
 import Plywood from "../catalog/plywood/PlywoodPage.jsx";
 import Paint from "../catalog/paint/PaintPage.jsx";
+import Insulation from "../catalog/insulation/InsulationPage.jsx";
+import Gypsum from "../catalog/gypsum/GypsumPage.jsx";
+import Adhesives from "../catalog/adhesives/AdhesivesPage.jsx";
+import FloorMixes from "../catalog/floormixes/FloorMixesPage.jsx";
+import WindowFilms from "../catalog/windowFilms/WindowFilmsPage.jsx";
 
 const Header = () => {
   return (
@@ -50,6 +55,11 @@ const Header = () => {
           <Route path="/category/foam" element={<Foam />} />
           <Route path="/category/plywood" element={<Plywood />} />
           <Route path="/category/paint" element={<Paint />} />
+          <Route path="/category/insulation" element={<Insulation />} />
+          <Route path="/category/gypsum" element={<Gypsum />} />
+          <Route path="/category/adhesives" element={<Adhesives />} />
+          <Route path="/category/floormixes" element={<FloorMixes />} />
+          <Route path="/category/windowfilms" element={<WindowFilms />} />
           <Route
             path="/*"
             element={

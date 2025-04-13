@@ -27,7 +27,7 @@ const categories = [
   { id: 9, name: "Краска", img: cat9, link: "/category/paint" },
   { id: 10, name: "Газоблоки UDK", img: cat10, link: "/category/gasblock" },
   { id: 11, name: "ДВП и фанера", img: cat11, link: "/category/plywood" },
-  { id: 12, name: "Утеплитель", img: cat12, link: "/category/12" },
+  { id: 12, name: "Утеплитель", img: cat12, link: "/category/insulation" },
 ];
 
 const PopularCategories = () => {
